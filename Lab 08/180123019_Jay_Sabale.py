@@ -48,39 +48,9 @@ for i in range(4):
         yAxis.append(math.exp(key))
         xAxis.append(t)
     
-    get_ipython().run_line_magic('matplotlib', 'inline')
     plt.plot(xAxis, yAxis)
     plt.title("For lambda = {}".format(lambda_[i]))
     plt.ylabel('S (t)')
     plt.xlabel('Time (t)')
     plt.show()
     print()
-
-# Algorithm II: Using Exponential Distribution
-# for i in range(4):
-#     X = {}
-#     Tj = 0
-#     X[Tj] = math.log(df.Close[65])
-    
-#     t = 0
-#     xAxis = [t]
-#     yAxis = [df.Close[65]]
-    
-#     for ctr in range(1000):
-#         u = np.random.uniform(0, 1)
-#         Rj_ = -math.log(u)/lambda_[i]
-#         Zj_ = np.random.normal(0, 1, 1)
-#         Yj_ = np.random.normal(mu, sigma)
-#         Tj_ = Tj + Rj_
-#         X[Tj_] = X[Tj] + (mu - sigma_sq/2)*Rj_ + sigma*math.sqrt(Rj_)*np.random.normal(0, 1) + Yj_
-#         Tj = Tj_
-        
-#         t = t + 1
-#         xAxis.append(t)
-#         yAxis.append(math.exp(X[Tj_]))
-    
-#     %matplotlib inline
-#     plt.plot(xAxis, yAxis)
-#     plt.title("For lambda = {}".format(lambda_[i]))
-#     plt.show()
-#     print()
