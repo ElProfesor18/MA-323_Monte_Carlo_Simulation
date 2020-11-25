@@ -150,16 +150,16 @@ def partA():
 def partB():
     H_sample_X, H_sample_Y = generateHalton(10000)
 
-    plt.scatter(H_sample_X, H_sample_Y)
+    plt.plot(H_sample_X, H_sample_Y)
     plt.title('Halton Sequence Actual')
-    plt.xlabel('phi_3(i)')
-    plt.ylabel('phi_2(i)')
+    plt.xlabel('phi_2(i)')
+    plt.ylabel('phi_3(i)')
     plt.show()
 
     plt.scatter(H_sample_X, H_sample_Y)
     plt.title('Halton Sequence Scattered')
-    plt.xlabel('phi_3(i)')
-    plt.ylabel('phi_2(i)')
+    plt.xlabel('phi_2(i)')
+    plt.ylabel('phi_3(i)')
     plt.show()
 
 
