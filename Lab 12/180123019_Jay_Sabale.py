@@ -109,7 +109,7 @@ def generateHalton(N):
         
         curr = 0.00
         temp = 1.00/3.00
-        for mult in binary:
+        for mult in ternary:
             curr += mult*temp
             temp = temp/3.00
         phi_3 = curr
@@ -148,6 +148,20 @@ def partA():
 
 
 def partB():
+    H_sample_X, H_sample_Y = generateHalton(100)
+
+    plt.plot(H_sample_X, H_sample_Y)
+    plt.title('Halton Sequence Actual')
+    plt.xlabel('phi_2(i)')
+    plt.ylabel('phi_3(i)')
+    plt.show()
+
+    plt.scatter(H_sample_X, H_sample_Y)
+    plt.title('Halton Sequence Scattered')
+    plt.xlabel('phi_2(i)')
+    plt.ylabel('phi_3(i)')
+    plt.show()
+
     H_sample_X, H_sample_Y = generateHalton(10000)
 
     plt.plot(H_sample_X, H_sample_Y)
